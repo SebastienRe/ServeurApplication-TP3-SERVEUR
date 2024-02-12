@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence 
+    xmlns="http://java.sun.com/xml/ns/persistence"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    version="1.0" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+    http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd"> 
+
+    <persistence-unit name="monUnite">
+        <jta-data-source>jdbc/coursSN</jta-data-source>
+        <properties>
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:postgresql://192.168.2.13:5432/coursSN"/>
+            <property name="jakarta.persistence.jdbc.user" value="etdsn"/>
+            <property name="jakarta.persistence.jdbc.password" value="3tud14nt"/>
+            <property name="jakarta.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+        </properties>
+    </persistence-unit>
+
+</persistence>

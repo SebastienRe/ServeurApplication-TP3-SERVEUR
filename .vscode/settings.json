@@ -1,0 +1,9 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "c:\\bin\\glassfish6\\glassfish\\lib\\appserv-rt.jar",
+        "c:\\bin\\glassfish6\\glassfish\\lib\\gf-client.jar",
+        "c:\\bin\\glassfish6\\glassfish\\lib\\grizzly-npn-api.jar",
+        "c:\\bin\\glassfish6\\glassfish\\lib\\javaee.jar"
+    ]
+}
