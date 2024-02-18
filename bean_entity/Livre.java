@@ -42,4 +42,8 @@ public class Livre {
     public Auteur getAuteur(){
         return this.auteur_num;
     }
+
+    public String toString() {
+        return "Livre [isbn=" + isbn + ", titre=" + titre + "]";
+    }
 }

@@ -1,7 +1,9 @@
 package bean_entity;
 
+import java.util.ArrayList;
 import java.util.List;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
@@ -16,8 +18,8 @@ public class Auteur {
     private int num;
     private String nom;
 
-    @OneToMany(targetEntity = Livre.class)
-    private List<Livre> livre;
+    @OneToMany(mappedBy = "auteur_num")
+    private List<Livre> livres;
 
     public Auteur() {
     }
@@ -33,5 +35,9 @@ public class Auteur {
 
     public String getNom() {
         return nom;
+    }
+
+    public List<Livre> getLivres() {
+        return livres;
     }
 }

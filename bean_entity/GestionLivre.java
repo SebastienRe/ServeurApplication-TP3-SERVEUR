@@ -3,6 +3,8 @@ package bean_entity;
 import jakarta.ejb.Stateless;
 import jakarta.persistence.PersistenceContext;
 import jakarta.persistence.EntityManager;
+import jakarta.persistence.Query;
+import java.util.List;
 
 @Stateless
 public class GestionLivre implements GestionLivreInterface { // bean
@@ -30,6 +32,19 @@ public class GestionLivre implements GestionLivreInterface { // bean
     public void unsetAuteur(String isbn) {
         Livre l = em.find(Livre.class, isbn);
         l.setAuteur(null);
+    }
+
+    @Override
+    public String getLivresAuthor(String isbn) {
+        Livre l = em.find(Livre.class, isbn);
+        Auteur a = l.getAuteur();
+        List<Livre> livres = a.getLivres();
+        
+        String livresStr = "";
+        for (Livre livre : livres) {
+            livresStr += livre + " ";
+        }
+        return livresStr;
     }
     
 }
